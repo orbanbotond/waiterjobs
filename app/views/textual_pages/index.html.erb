@@ -1,0 +1,27 @@
+<h1>Listing textual_pages</h1>
+
+<table>
+  <tr>
+    <th>Meta</th>
+    <th>Content</th>
+    <th>Title</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @textual_pages.each do |textual_page| %>
+  <tr>
+    <td><%= textual_page.meta %></td>
+    <td><%= textual_page.content %></td>
+    <td><%= textual_page.title %></td>
+    <td><%= link_to 'Show', textual_page %></td>
+    <td><%= link_to 'Edit', edit_textual_page_path(textual_page) %></td>
+    <td><%= link_to 'Destroy', textual_page, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Textual page', new_textual_page_path %>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Contact person:</b>
+  <%= @restaurant_request.contact_person %>
+</p>
+
+<p>
+  <b>Restaurant name:</b>
+  <%= @restaurant_request.restaurant_name %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @restaurant_request.phone %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @restaurant_request.email %>
+</p>
+
+<p>
+  <b>Availability:</b>
+  <%= @restaurant_request.availability %>
+</p>
+
+
+<%= link_to 'Edit', edit_restaurant_request_review_path(@restaurant_request) %> |
+<%= link_to 'Back', restaurant_request_reviews_path %>

@@ -1,0 +1,29 @@
+<h1>Listing restaurant_requests</h1>
+
+<table>
+  <tr>
+    <th>Contact person</th>
+    <th>Restaurant name</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Availability</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @restaurant_requests.each do |restaurant_request| %>
+  <tr>
+    <td><%= restaurant_request.contact_person %></td>
+    <td><%= restaurant_request.restaurant_name %></td>
+    <td><%= restaurant_request.phone %></td>
+    <td><%= restaurant_request.email %></td>
+    <td><%= restaurant_request.availability %></td>
+    <td><%= link_to 'Show', restaurant_request_review_path(restaurant_request) %></td>
+    <td><%= link_to 'Edit', edit_restaurant_request_review_path(restaurant_request) %></td>
+    <td><%= link_to 'Destroy', restaurant_request_review_path(restaurant_request), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

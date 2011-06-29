@@ -1,0 +1,35 @@
+<h1>Listing restaurant_pages</h1>
+
+<table>
+  <tr>
+    <th>Address</th>
+    <th>Meta</th>
+    <th>Content</th>
+    <th>City</th>
+    <th>Sefurl</th>
+    <th>Name</th>
+    <th>Title</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @restaurant_pages.each do |restaurant_page| %>
+  <tr>
+    <td><%= restaurant_page.address %></td>
+    <td><%= restaurant_page.meta %></td>
+    <td><%= restaurant_page.content %></td>
+    <td><%= restaurant_page.city %></td>
+    <td><%= restaurant_page.sefurl %></td>
+    <td><%= restaurant_page.name %></td>
+    <td><%= restaurant_page.title %></td>
+    <td><%= link_to 'Show', restaurant_page %></td>
+    <td><%= link_to 'Edit', edit_restaurant_page_path(restaurant_page) %></td>
+    <td><%= link_to 'Destroy', restaurant_page, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Restaurant page', new_restaurant_page_path %>

@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<%= image_tag @restaurant_page.image.url(:thumb) %>
+
+<p>
+  <b>Address:</b>
+  <%= @restaurant_page.address %>
+</p>
+
+<p>
+  <b>Meta:</b>
+  <%= @restaurant_page.meta %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @restaurant_page.content %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @restaurant_page.city %>
+</p>
+
+<p>
+  <b>Sefurl:</b>
+  <%= @restaurant_page.sefurl %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @restaurant_page.name %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @restaurant_page.title %>
+</p>
+
+
+<%= link_to 'Edit', edit_restaurant_page_path(@restaurant_page) %> |
+<%= link_to 'Back', restaurant_pages_path %>

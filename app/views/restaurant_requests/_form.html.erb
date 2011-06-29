@@ -1,0 +1,45 @@
+<% 
+  if @restaurant_request.new_record?
+    url = restaurant_requests_path(@restaurant_request)
+  else
+    url = restaurant_request_review_path(@restaurant_request)
+  end
+%>
+
+<%= form_for(@restaurant_request, :url => url) do |f| %>
+  <% if @restaurant_request.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@restaurant_request.errors.count, "error") %> prohibited this restaurant_request from being saved:</h2>
+
+      <ul>
+      <% @restaurant_request.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :contact_person %><br />
+    <%= f.text_field :contact_person %>
+  </div>
+  <div class="field">
+    <%= f.label :restaurant_name %><br />
+    <%= f.text_field :restaurant_name %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :availability %><br />
+    <%= f.text_field :availability %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

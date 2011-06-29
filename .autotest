@@ -1,0 +1,14 @@
+require "autotest/restart"
+
+# Redgreen Works Just With Test::Unit
+# require 'redgreen/autotest'
+
+# Autotest::Growl::show_modified_files = true
+
+Autotest.add_hook :initialize do |autotest|
+  %w{.autotest .rspec .git .svn .hg .DS_Store ._* vendor tmp log doc}.each do |exception|
+    autotest.add_exception(exception)
+  end
+end
+
+#This should be good enough
